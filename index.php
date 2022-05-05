@@ -47,25 +47,25 @@ require 'template/head.php';
 	  	</div>
 	</div>
 
-	<div class="price">
-		<h2>Price sa putovanja</h2>
+	<div class="recenzije">
+		<h2>Recenzije filmova</h2>
 		<?php
 		$result = mysqli_query($conn,"SELECT * FROM recenzije LIMIT 2");
 		?>
-		<div class="prica">
+		<div class="recenzija">
 			<?php while($row = mysqli_fetch_array($result)) {?>
-			<div class="prica-naslov">
+			<div class="recenzija-naslov">
 				<h4 class="n-centar"><?php echo htmlspecialchars($row['naslov']);?></h4>
 			</div>
-			<img src="<?php echo htmlspecialchars($row['slika']);?>" class="prica-slika">
-			<p class="prica-text">
+			<img src="<?php echo htmlspecialchars($row['slika']);?>" class="recenzija-slika">
+			<p class="recenzija-text">
 				<?php 
 				$sadrzaj = $row["sadrzaj"];
 				$sadrzaj = substr($sadrzaj,0,350); 
 				echo $sadrzaj.'...';?>	
 			</p>
 			<div class="nastavi">
-				<?php echo '<a href='.'prica.php?prica='.htmlspecialchars($row['id']).'>';?>
+				<?php echo '<a href='.'recenzija.php?recenzija='.htmlspecialchars($row['id']).'>';?>
 			Nastavi sa čitanjem</a>
 			</div>
 		<?php }?>
@@ -73,13 +73,13 @@ require 'template/head.php';
 		
 	</div>
 
-	<a href="price.php">
-		<div class="sve-price">
+	<a href="recenzije.php">
+		<div class="sve-recenzije">
 			Pogledaj sve recenzije
 		</div>
 	</a>
 	<a href="napisi.php">
-		<div class="sve-price">
+		<div class="sve-recenzije">
 			Napiši svoju recenziju
 		</div>
 	</a>

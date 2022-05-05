@@ -19,16 +19,16 @@ if (isset($_POST['izmeni']) )
    }
 
 }
-   $prepare = $conn->prepare("UPDATE price SET naslov = ?, autor = ?, sadrzaj = ?, slika = ? WHERE id = ?");
-   $prepare->bind_param("ssss",  $naslov, $autor, $sadrzaj, $slika );
+   $prepare = $conn->prepare("UPDATE recenzije SET naslov = ?, autor = ?, sadrzaj = ?, slika = ? WHERE id = ?");
+   $prepare->bind_param("ssssi",  $naslov, $autor, $sadrzaj, $slika, $id );
    $prepare->execute();
    if(!$prepare->error)
    {	
-       header("Refresh:0; url=../price.php?msg=updated");
+       header("Refresh:0; url=../recenzije.php?msg=updated");
    }
    else
    {
-       header("Refresh:0; url=../price.php?msg=error");
+       header("Refresh:0; url=../recenzije.php?msg=error");
    }
 
 

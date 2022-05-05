@@ -97,17 +97,17 @@ section{
 	padding: 5px 20px;
 	margin-top: 15px;
 }
-.price{
+.recenzije{
 	margin-top: 10px;
 	text-align: center;
 	border-radius: 3px;
 	overflow: hidden;
 }
-.prica{
+.recenzija{
 	width: 100%;
 	text-align: center;
 }
-.prica-slika{
+.recenzija-slika{
 	border: 1px solid #fc4747;
 	border-radius: 3px;	
 	width: 60%;
@@ -119,13 +119,13 @@ section{
 	font-weight: bold;
 
 }
-.prica-text{
+.recenzija-text{
 	text-align: center;
     width: 60%;
     padding: 5px 10%;
     margin: 0 auto;
 }
-.prica-naslov{
+.recenzija-naslov{
 	width: 60%;
 	background-color:rgba(252, 71, 71, .5);
 	margin: auto;
@@ -618,7 +618,7 @@ hr{
 .m-opis{
 	text-align: right;
 }
-.sve-price{
+.sve-recenzije{
 	width: 100%;
 	background-color: #b52d2d;
 	display: flex;
@@ -641,14 +641,14 @@ hr{
 	height: 200px;
 	resize: none;
 }
-.prica-dugme{
+.recenzija-dugme{
 	width: 30%;
 	border: 1px solid #fc4747;
 	background-color: #f0f0f0;
 	margin-bottom: 15px;
 	line-height: 30px;
 }
-.prica-dugme:hover{
+.recenzija-dugme:hover{
 	background-color: #b52d2d;
 	color: white;
 }
@@ -711,7 +711,7 @@ hr{
 		width: 80% !important;
 		margin: auto !important;
 	}
-	.prica-naslov{
+	.recenzija-naslov{
 	transform: translateY(170px);
 	font-size: 25px;
 	}

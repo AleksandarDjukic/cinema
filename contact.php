@@ -4,10 +4,10 @@ require 'template/head.php';
 <nav>
 		<label class="logo">Cinema</label>
 		<ul>
-			<li><a class="aktivno" href="index.php">Pocetna</a></li>
+			<li><a href="index.php">Pocetna</a></li>
 			<li><a href="ponuda.php">Ponuda</a></li>
 			<li><a href="recenzije.php">Recenzije</a></li>
-			<li><a href="contact.php">Kontakt</a></li>
+			<li><a class="aktivno" href="contact.php">Kontakt</a></li>
 		</ul>
 		<label id="icon">
 			<i class="fa fa-bars"></i>
@@ -24,8 +24,8 @@ require 'template/head.php';
 				<i class="fa fa-envelope"></i>
 			</div>
 			<div class="eit">
-				<p>support@travel.com <br>
-					pitanja@travel.com
+				<p>support@cinema.com <br>
+					pitanja@cinema.com
 				</p>
 			</div>
 		</div>

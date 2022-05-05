@@ -1,5 +1,5 @@
 document.getElementById('izmjeni').addEventListener('click', 
-	function(){
+	() => {
 		document.querySelector('.l-dodaj').style.display = 'none';
 		document.querySelector('.l-obrisi').style.display = 'none';
 		document.querySelector('.l-izmjeni').style.display = 'flex';

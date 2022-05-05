@@ -16,19 +16,19 @@ if (isset($_POST['modal']) )
       $uslovi      = $_POST['uslovi'];
       $broj        = $_POST['broj'];
       $telefon     = $_POST['telefon'];
-      $id_lokacije = $_POST['id'];
+      $id_filma    = $_POST['id'];
 
    }
 
 }
    if ($uslovi) {
-      $url = 'http://localhost/projekat/lokacija.php?page='.$_POST['id'].'&msg=success';
+      $url = 'http://localhost/cinema/film.php?page='.$_POST['id'].'&msg=success';
    }
    else{
-      $url = 'http://localhost/projekat/lokacija.php?page='.$_POST['id'].'&msg=error';
+      $url = 'http://localhost/cinema/film.php?page='.$_POST['id'].'&msg=error';
    }
-   $prepare = $conn->prepare("INSERT INTO rezervacije (ime, prezime, broj_telefona, broj_osoba, id_lokacije) VALUES ( ? , ? , ? , ?, ? )");
-   $prepare->bind_param("sssii",  $ime, $prezime, $telefon, $broj, $id_lokacije );
+   $prepare = $conn->prepare("INSERT INTO rezervacije (ime, prezime, broj_telefona, broj_osoba, id_filma) VALUES ( ? , ? , ? , ?, ? )");
+   $prepare->bind_param("sssii",  $ime, $prezime, $telefon, $broj, $id_filma );
  
    $prepare->execute();
    if(!$prepare->error)

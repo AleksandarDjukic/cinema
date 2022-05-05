@@ -16,13 +16,13 @@ if (isset($_POST['izmeni-rez']) )
       $prezime       = $_POST['prezime'];
       $broj_telefona = $_POST['broj_telefona'];
       $broj_osoba    = $_POST['broj_osoba'];
-      $id_lokacije   = $_POST['id_lokacije'];
+      $id_filma      = $_POST['id_filma'];
 
    }
 
 }
-   $prepare = $conn->prepare("UPDATE rezervacije SET ime = ?, prezime = ?, broj_telefona = ?, broj_osoba = ?, id_lokacije = ? WHERE id = ?");
-   $prepare->bind_param("sssiii",  $ime, $prezime, $broj_telefona, $broj_osoba, $id_lokacije, $id );
+   $prepare = $conn->prepare("UPDATE rezervacije SET ime = ?, prezime = ?, broj_telefona = ?, broj_osoba = ?, id_filma = ? WHERE id = ?");
+   $prepare->bind_param("sssiii",  $ime, $prezime, $broj_telefona, $broj_osoba, $id_filma, $id );
  
    $prepare->execute();
    if(!$prepare->error)

@@ -44,7 +44,7 @@ else{
         <th>Prezime</th>
         <th>Broj Telefona</th>
         <th>Broj osoba</th>
-        <th>ID lokacije</th>
+        <th>ID Filma</th>
       </tr>";
     while($row = mysqli_fetch_array($result))
     {
@@ -54,9 +54,7 @@ else{
       echo "<td>" . $row['prezime'] . "</td>";
       echo "<td>" . $row['broj_telefona'] . "</td>";
       echo "<td>" . $row['broj_osoba'] . "</td>";
-      echo "<td>" . $row['id_lokacije'] . "</td>";
-
-      
+      echo "<td>" . $row['id_filma'] . "</td>";      
       echo "</tr>";
     }
     echo "</table>";
@@ -68,7 +66,7 @@ else{
 
     <div class="rez-sadrzaj">
     <div class="izmjeni-rez">
-       <form method="POST" action="rezervacije/izmjeniRez.php">
+       <form method="POST" action="rezervacije/izmjeniRez.php" style="width: 100%">
 
         <h2>Izmjeni rezervacije</h2>
         <h6>Izaberi rezervisanog kog želiš da izmjeniš</h6>
@@ -98,10 +96,10 @@ else{
                 <input autocomplete="off" type="text" class="form-control" name="broj_telefona" id="">
         </div>
         <div class="form-group">
-                <label>Izaberi lokaciju</label>
-                <select class="form-control"  name="id_lokacije" id="id">
+                <label>Izaberi film</label>
+                <select class="form-control"  name="id_filma" id="id">
           <?php 
-                $update = mysqli_query($conn,"SELECT * FROM lokacija");
+                $update = mysqli_query($conn,"SELECT * FROM ponuda");
                 while($row = mysqli_fetch_array($update))
                 {
                 echo "<option value='". $row['id'] ."'>".$row['id'].' '.$row['naslov'].' '.$row['cena']."</option>";
@@ -118,7 +116,7 @@ else{
 
     <!----------------------------DELETE-------------------------------->
     <div class="obrisi-rez">
-    <form method="post" action="rezervacije/obrisi.php">
+    <form method="post" action="rezervacije/obrisi.php" style="width: 100%">
     <div class="delete">
         <h2>Obriši rezervaciju</h2>
         <h6>Izaberi rezervaciju koju želiš da obrišeš</h6>

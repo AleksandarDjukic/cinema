@@ -9,16 +9,16 @@ if (isset($_POST['deleteSubmit']) )
    if(isset($_POST['id']))
    {    
       $id = $_POST['id'];  
-      $prepare = $conn->prepare("DELETE FROM price WHERE id = ?");
+      $prepare = $conn->prepare("DELETE FROM recenzije WHERE id = ?");
       $prepare->bind_param("i", $id);
       $prepare->execute();
         if(!$prepare->error)
         {
-          header("Refresh:0; url=../price.php?msg=deleted");
+          header("Refresh:0; url=../recenzije.php?msg=deleted");
         }
         else
         {
-          header("Refresh:0; url=../price.php?msg=error");
+          header("Refresh:0; url=../recenzije.php?msg=error");
         }
     }
   else echo "Greska";

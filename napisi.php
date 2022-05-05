@@ -29,28 +29,28 @@ if (isset($_GET['msg'])) {
 	<?php require 'template/slajder.php'?>
 
 	<div class="container">
-		<div class="price">
+		<div class="recenzije">
 		<h2>Napiši svoju recenziju</h2>
 
-		<div class="prica">
-			<form method="post" action="dodajPricu.php">
-				<label for="naslov_price">Naslov filma</label>
-				<input autocomplete="off" class="p-input" type="text" name="naslov_price">
+		<div class="recenzija">
+			<form method="post" action="dodajRecenziju.php">
+				<label for="naslov">Naslov filma</label>
+				<input autocomplete="off" class="p-input" type="text" name="naslov">
 				<label for="autor">Autor</label>
 				<input autocomplete="off" class="p-input" type="text" name="autor">
 				<label for="slika">Slika (link)</label>
 				<input autocomplete="off" class="p-input" type="text" name="slika">
 				<label for="sadrzaj">Sadržaj</label>
 				<textarea class="p-input p-textarea" name="sadrzaj"></textarea>
-				<input value="Pošalji" type="submit" name="dodaj_pricu" class="prica-dugme">
+				<input value="Pošalji" type="submit" name="dodaj_pricu" class="recenzija-dugme">
 
 			</form>
 		</div>
 		
 	</div>
-	<a href="price.php">
-		<div class="sve-price">
-			Pogledaj sve priče
+	<a href="recenzije.php">
+		<div class="sve-recenzije">
+			Pogledaj sve recenzije
 		</div>
 	</a>
 	</div>

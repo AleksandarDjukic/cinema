@@ -10,7 +10,7 @@
 				<div class="menu">
 					<a href="index.php" class="f-text">Pocetna</a>
 					<a href="ponuda.php" class="f-text">Ponuda</a>
-					<a href="price.php" class="f-text">Priče sa putovanja</a>
+					<a href="recenzije.php" class="f-text">Recenzije</a>
 					<a href="contact.php" class="f-text">Kontakt</a>
 				</div>
 				<hr>
@@ -27,5 +27,5 @@
 		</div>
 	</div>
 	<div class="footer-donji">
-			<p>Copyright@2021 Završni rad Aleksandar Đukić IT58/18</p>
+			<p>Copyright@2021 Završni rad</p>
 	</div>

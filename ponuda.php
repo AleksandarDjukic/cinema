@@ -7,8 +7,8 @@
 	<nav>
 		<label class="logo">Cinema</label>
 		<ul>
-			<li><a class="aktivno" href="index.php">Pocetna</a></li>
-			<li><a href="ponuda.php">Ponuda</a></li>
+			<li><a href="index.php">Pocetna</a></li>
+			<li><a class="aktivno" href="ponuda.php">Ponuda</a></li>
 			<li><a href="recenzije.php">Recenzije</a></li>
 			<li><a href="contact.php">Kontakt</a></li>
 		</ul>
@@ -90,7 +90,7 @@
 		</div>
 	</div>
 	<div class="footer-donji">
-			<p>Copyright@2021 Završni rad Aleksandar Đukić IT58/18</p>
+			<p>Copyright@2021 Završni rad </p>
 		</div>
 
 </div>

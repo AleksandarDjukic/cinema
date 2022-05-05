@@ -70,7 +70,7 @@ else{
   <hr>
   <!--------------------------------------UPDATE-------------------------------->
     <div class="col-lg-4 p-izmjeni" style="margin: 0 auto;margin-top: 50px">
-       <form method="POST" action="izmeni.php">
+       <form method="POST" action="./recenzije/izmeni.php"  style="width: 100%">
 
         <h2>Izmeni recenziju</h2>
         <h6>Izaberi recenziju koju želiš da izmjeniš</h6>
@@ -106,14 +106,14 @@ else{
 
     <!----------------------------DELETE-------------------------------->
     <div class="col-lg-4 p-obrisi" style="margin: 0 auto;margin-top: 50px">
-    <form method="post" action="price/obrisi.php">
+    <form method="post" action="./recenzije/obrisi.php" style="width: 100%">
     <div class="delete">
         <h2>Obriši recenziju</h2>
         <h6>Izaberi recenziju koju želiš da obrišeš</h6>
         <select class="form-control"  name="id" id="id">
           <!--<option value="0">Izaberi</option>-->
           <?php 
-                $result = mysqli_query($conn,"SELECT * FROM price");
+                $result = mysqli_query($conn,"SELECT * FROM recenzije");
                 while($row = mysqli_fetch_array($result))
                 {
                 echo "<option value='".$row['id']."'>".$row['id']." ". $row['naslov']."</option>";

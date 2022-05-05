@@ -2,14 +2,14 @@
 <?php
 if(!require_once('../konekcija.php'))
    {
-       die("Učitavanje filea za konekciju nije uspjelo");
+       die("Učitavanje file-a za konekciju nije uspjelo");
    }
 if (isset($_POST['deleteSubmit']) )
 {
    if(isset($_POST['id']))
    {    
       $id = $_POST['id'];  
-      $prepare = $conn->prepare("DELETE FROM lokacija WHERE id = ?");
+      $prepare = $conn->prepare("DELETE FROM ponuda WHERE id = ?");
       $prepare->bind_param("i", $id);
       $prepare->execute();
         if(!$prepare->error)

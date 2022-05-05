@@ -7,7 +7,7 @@
 			<input autocomplete="off" class="m-prezime" type="text" placeholder="Broj telefona" name="telefon">
 			<div class="uslovi">
 				<p class="t-uslovi">Prihvatam <a href="$">uslove</a> Cinema bioskopa.</p>
-				<input class="c-uslovi" type="checkbox" name="uslovi">
+				<input class="c-uslovi" type="checkbox" name="uslovi" require />
 			</div>
 			<div class="broj">
 				<p class="b-tekst">Broj osoba: </p>

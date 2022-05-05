@@ -69,13 +69,12 @@ else{
   <button class="tab o-tab" id="obrisi">Obrisi</button>
 </div>
     <hr>
-
   <div class="col-lg-4 l-dodaj" style="margin: 0 auto;margin-top: 50px">
-       <form method="POST" action="ponuda/dodaj.php">
+       <form method="POST" action="./ponuda/dodaj.php" style="width: 100%">
            <div class="form-group">
                 <h2>Dodaj novi film u ponudu</h2>
                 <label for="">Naslov:</label>
-                <input autocomplete="off" type="text" class="form-control" name="naslov" id="">
+                <input autocomplete="off" type="text" class="form-control" name="naslov_filma" id="">
            </div>
            <div class="form-group">
                <label for="">Cena</label>
@@ -87,7 +86,7 @@ else{
            </div>
            <div class="form-group">
                <label for="">Slika</label>
-               <input autocomplete="off" type="text" class="form-control" name="slika1" id="">
+               <input autocomplete="off" type="text" class="form-control" name="slika" id="">
            </div>
            <button type="submit" name="dodaj" class="btn btn-primary">Dodaj</button>
        </form>
@@ -95,13 +94,12 @@ else{
        <!--------------------------------------UPDATE-------------------------------->
 
     <div class="col-lg-4 l-izmjeni" style="margin: 0 auto;margin-top: 50px">
-       <form method="POST" action="ponuda/izmeni.php">
-
-        <h2>Izmeni podatke o lokaciji</h2>
-        <h6>Izaberi lokaciju koje želiš da izmjeniš</h6>
+       <form method="POST" action="ponuda/izmeni.php" style="width: 100%">
+        <h2>Izmeni podatke o filmovima</h2>
+        <h6>Izaberi film koje želiš da izmjeniš</h6>
         <select class="form-control"  name="id" id="id">
           <?php 
-                $update = mysqli_query($conn,"SELECT * FROM lokacija");
+                $update = mysqli_query($conn,"SELECT * FROM ponuda");
                 while($row = mysqli_fetch_array($update))
                 {
                 echo "<option value='". $row['id'] ."'>".$row['id'].' '.$row['naslov']."</option>";
@@ -122,7 +120,7 @@ else{
            </div>
            <div class="form-group">
                <label for="">Slika </label>
-               <input autocomplete="off" type="text" class="form-control" name="slika1" id="">
+               <input autocomplete="off" type="text" class="form-control" name="slika" id="">
            </div>        
         <button type="submit" name="izmeni" class="btn btn-warning">Izmeni</button>
     </div>
@@ -131,13 +129,13 @@ else{
 
     <!----------------------------DELETE-------------------------------->
     <div class="col-lg-4 l-obrisi" style="margin: 0 auto;margin-top: 50px">
-    <form method="post" action="ponuda/obrisi.php">
+    <form method="post" action="ponuda/obrisi.php" style="width: 100%">
     <div class="delete">
-        <h2>Obriši lokaciju iz ponude</h2>
-        <h6>Izaberi lokaciju koju želiš da obrišeš</h6>
+        <h2>Obriši film iz ponude</h2>
+        <h6>Izaberi film koju želiš da obrišeš</h6>
         <select class="form-control"  name="id" id="id">
           <?php 
-                $result = mysqli_query($conn,"SELECT * FROM lokacija");
+                $result = mysqli_query($conn,"SELECT * FROM ponuda");
                 while($row = mysqli_fetch_array($result))
                 {
                 echo "<option value='".$row['id']."'>".$row['id']." ". $row['naslov']." ".$row["cena"] ."€</option>";
@@ -148,7 +146,8 @@ else{
     </div>
   </form>
 </div>
-<script type="text/javascript" src="./admin.js"></script>
+<script type="text/javascript" src='./admin.js'></script>
+
 </body>
 </html>
 <?php
