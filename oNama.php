@@ -2,68 +2,49 @@
 require 'template/head.php';   
 ?>
 <nav>
-		<label class="logo">Cinema</label>
-		<ul>
-			<li><a href="index.php">Pocetna</a></li>
-			<li><a href="ponuda.php">Ponuda</a></li>
-			<li><a href="recenzije.php">Recenzije</a></li>
-			<li><a class="aktivno" href="contact.php">Kontakt</a></li>
-		</ul>
-		<label id="icon">
-			<i class="fa fa-bars"></i>
-		</label>
-	</nav>
-<div id="sve">
-	<div class="c-banner">
-		<h1 class="c-naslov">Online podrška</h1>
-		<h1 class="c-malinaslov">Naš tim za podršku je 24/7 dostupan.</h1>
+	<label class="logo">Cinema</label>
+	<ul>
+		<li><a href="index.php">Pocetna</a></li>
+		<li><a href="ponuda.php">Ponuda</a></li>
+		<li><a href="recenzije.php">Recenzije</a></li>
+		<li><a class="aktivno" href="oNama.php">O nama</a></li>
+	</ul>
+	<label id="icon">
+		<i class="fa fa-bars"></i>
+	</label>
+</nav>
+<div class="kategorije">
+	<div class="tab">
+	  <button class="tablinks" onclick="openCity(event, 'beograd')">Beograd</button>
+	  <button class="tablinks" onclick="openCity(event, 'novisad')">Novi Sad</button>
+	  <button class="tablinks" onclick="openCity(event, 'nis')">Niš</button>
+	  <button class="tablinks" onclick="openCity(event, 'sve')">Sve</button>
 	</div>
-	<div class="kontakt">
-		<div class="proba">
-			<div class="ikonica">
-				<i class="fa fa-envelope"></i>
-			</div>
-			<div class="eit">
-				<p>support@cinema.com <br>
-					pitanja@cinema.com
-				</p>
-			</div>
+	<div id="beograd" class="tabcontent">
+		<div class="bioskop">
+			<h3>Beograd 1</h3>
+			<img src="img/about/bg1.jpg"/>
+			<p>Svetog Save 1</p>
 		</div>
-		<div class="proba">
-			<div class="ikonica">
-				<i class="fa fa-phone"></i>
-			</div>	
-			<div class="eit">
-				<p>021 111 2222 <br>
-					+381 66 123 44 55
-				</p>
-			</div>
+		<div class="bioskop">
+			<h3>Beograd 2</h3>
+			<img src="img/about/bg2.jpg"/>
+			<p>Cara Lazara 5</p>
 		</div>
 	</div>
-
-	<div class="container">
-	<div class="k-sadrzaj row">
-	<form class="forma col-md-6" action="mail.php" method="POST" >
-		<div class="input-t">
-			<input class="i-tekst" type="text" name="ime" placeholder="Ime">
-			<input class="i-tekst" type="text" name="prezime" placeholder="Prezime">
-		</div>
-		<input class="email" type="text" name="email" placeholder="E-mail">
-		<textarea class="ta-kontakt" name="pitanje" placeholder="Postavi pitanje.."></textarea>
-		<div class="input-d">
-			<input class="submit" type="submit" name="posalji" value="Pošalji">
-		</div>
-	</form>
-	<div class="dodatni-tekst col-md-6">
-		<div class="desno">
-			<div class="desno-naslov">
-				<h3><b>Popuni<br> formu</b></h3>
-			</div>
-			<h4>Unesi podatke i pitanje</h4>
-			<div class="desno-tekst">
-			<p> Ako se niste dovoljno informisali možete nam direktno postaviti pitanje.U najkraćem mogućem roku dobićete odgovor na e-mail.</p></div>
+	<div id="novisad" class="tabcontent">
+		<div class="bioskop">
+			<h3>Novi Sad</h3>
+			<img src="img/about/ns.jpg"/>
+			<p>Bulevar Oslobođenja 32</p>
 		</div>
 	</div>
+	<div id="nis" class="tabcontent">
+		<div class="bioskop">
+			<h3>Niš</h3>
+			<img src="img/about/nis.jpg"/>
+			<p>Nikole Tesle 7</p>
+		</div>
 	</div>
 </div>
 <div class="tamno">
@@ -80,10 +61,8 @@ require 'template/head.php';
 		<img src="img/about/fe.jpg" class="partneri-slika">
 		<img src="img/about/unicef.jpeg" class="partneri-slika">
 	</div>
-
-<?php 
-require 'template/footer.php';   
-?>
+<?php require 'template/footer.php'; ?>
 </div>
+<script src="./javascript/kategorije.js"></script>
 </body>
 </html>

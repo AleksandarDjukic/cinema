@@ -95,8 +95,8 @@ td{
 	display: block;
 	margin: auto;
 	margin-top: 30px;
-	background-color: #ED7C4D;
-	border: 1px solid #ED7C4D;
+	background-color: #fc4747;
+	border: 1px solid #fc4747;
 	height: 30px;
 	color: #fff;
 }
@@ -113,8 +113,8 @@ td{
 	width: 100px;
 	line-height: 30px;
 	border: 0;
-	background-color: #ED7C4D;
-	border:  1px solid #ED7C4D;
+	background-color: #fc4747;
+	border:  1px solid #fc4747;
 	color: #fff;
 	position: absolute;
 	top: 15px;
@@ -126,5 +126,5 @@ td{
 .odjava-btn{
 	position: absolute;
 	top: 10px;
-	right: 15px;
+	left: 15px;
 }

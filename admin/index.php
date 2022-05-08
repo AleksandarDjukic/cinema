@@ -20,7 +20,7 @@ if (isset($_GET['msg'])) {
     }
 }
 ?>
-<body style="background-color: #4DE4ED;">
+<body style="background-color: #d79a9a;">
     <form action="login/login.php" method="post" class="prijava-forma">
         <p>Username</p>
         <input type="text" name="uname" class="i-p" autocomplete="off">

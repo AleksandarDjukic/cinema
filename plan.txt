@@ -1,3 +1,3 @@
-- rezervacija modal js validacija
 - u futer dodati ime i br indeksa
-- dugme odjava popravi
+- ispeglat do kraja
+- jos js-a ubaciti

@@ -34,48 +34,43 @@ else{
 			<li><a class="aktivno" href="index.php">Pocetna</a></li>
 			<li><a href="ponuda.php">Ponuda</a></li>
 			<li><a href="recenzije.php">Recenzije</a></li>
-			<li><a href="contact.php">Kontakt</a></li>
+			<li><a href="oNama.php">O nama</a></li>
 		</ul>
 		<label id="icon">
 			<i class="fa fa-bars"></i>
 		</label>
 	</nav>
-
-
-<section id="sve" >
-	<div class="container-fluid text-center">    
-	  <div class="row content">
-	    <div class="col-sm-8 "> 
-	    	<div class="detalji">
-				<div class="galerija">
-					<img src="<?php echo htmlspecialchars($row['slika']); ?>" class="l-slika">			
+	<section id="sve" >
+		<div class="container-fluid text-center">    
+			<div class="row content">
+				<div class="col-sm-8 "> 
+					<div class="detalji">
+						<div class="galerija">
+							<img src="<?php echo htmlspecialchars($row['slika']); ?>" class="l-slika">			
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 sidenav">
+					<div class="side">
+						<h2 class="l-naslov"><?php echo htmlspecialchars($row["naslov"]);?></h2>
+						<hr>
+						<p>Cena: <?php echo htmlspecialchars($row["cena"]);?> € </p>
+						<hr>
+						<p><?php echo htmlspecialchars($row["opis"]);?></p>
+						<hr>
+						<button id="rez" class="side-dugme">Rezerviši</button>
+					</div>
 				</div>
 			</div>
-	    </div>
-	    <div class="col-sm-4 sidenav">
-			<div class="side">
-				<h2 class="l-naslov"><?php echo htmlspecialchars($row["naslov"]);?></h2>
-		        <hr>
-				<p>Cena: <?php echo htmlspecialchars($row["cena"]);?> € </p>
-				<hr>
-				<p><?php echo htmlspecialchars($row["opis"]);?></p>
-				<hr>
-				<button id="rez" class="side-dugme">Rezerviši</button>
-			</div>
-	    </div>
-	  </div>
-	</div>
-	<?php
-		require 'template/footer.php'
-	?>
-</section>
-
+		</div>
+		<?php
+			require 'template/footer.php'
+		?>
+	</section>
 <?php require 'template/modal.php'; ?>
-
 <script type="text/javascript" src="javascript/modal.js"></script>
 </body>
 </html>
-
 <?php
  }
 }
