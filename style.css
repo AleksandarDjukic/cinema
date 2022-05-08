@@ -53,27 +53,7 @@ nav #icon{
 	cursor: pointer;
 	display: none;
 }
-#myCarousel, #myCarousel img{
-	height: 399px;
-}
 
-.slider-sadrzaj{
-	position: absolute;
-	top: 40%;
-	left: 15%;
-	color: white;
-}
-.naslov-slider{
-	font-size: 40px;
-	font-family: 'Open Sans', sans-serif;
-}
-.text-slider{
-	font-size: 20px;
-	font-family: 'Open Sans', sans-serif;
-}
-.slika-slider{
-	width: 100% !important;
-}
 
 section{
 	height: calc(100vh-80px);
@@ -169,9 +149,7 @@ section{
 	font-weight: 700;
 
 }
-.n-link:hover{
 
-}
 .i-slika{
 	height: 250px !important;
 }
@@ -182,14 +160,7 @@ section{
 	font-weight: 800;
 	color: #b52d2d;
 }
-.dugme-slider{
-	background: #b52d2d !important;
-	border: 1px solid white !important;
-	border-radius: 3px;
-	}
-.dugme-slider:hover{
-	background: #fc4747 !important;
-	}
+
 .footer{
 	width: 100%;
 	padding: 20px 0;
@@ -273,6 +244,8 @@ section{
 	border-radius: 5px;
 	margin-top: 15px;
 	position: relative;
+	padding-left: 15%;
+    padding-right: 10%;
 
 }
 .ponuda-naslov{
@@ -356,8 +329,8 @@ hr{
 }
 .tamno{
 	width: 100%;
-	height: 400px;
-	padding-top: 80px;
+	height: 200px;
+	padding-top: 15px;
 	background-color: #b52d2d;
 	text-align: center;
 	
@@ -732,32 +705,10 @@ hr{
 		color: white;
 		font-weight: bold;
 	}
-	.slider-sadrzaj{
-	position: absolute;
-	top: 0 !important ;
-	left: 10% !important;
-	color: white;
-	width: 80%;
-	}
-	.naslov-slider{
-		font-size: 28px !important ; 
-		font-family: 'Open Sans', sans-serif;
-		font-weight: bold;
-	}
-	.text-slider{
-		font-size: 18px !important;
-		font-family: 'Open Sans', sans-serif;
-	}
-	.dugme-slider{
-	}
+
 }
 @media (max-width: 730px){
-	.carousel{
-		height: 220px;
-	}
-	.slika-slider{
-		height: 220px !important;
-	}
+
 	nav #icon{
 		display: block;
 	}
@@ -785,25 +736,6 @@ hr{
 	}
 	nav ul.prikazi{
 		left: 0;
-	}
-	.slider-sadrzaj{
-	position: absolute;
-	top: 10% !important ;
-	left: 10% !important;
-	color: white;
-	width: 80%;
-	}
-	.naslov-slider{
-		font-size: 20px !important ; 
-		font-family: 'Open Sans', sans-serif;
-		font-weight: bold;
-	}
-	.text-slider{
-		font-size: 14px !important;
-		font-family: 'Open Sans', sans-serif;
-	}
-	.dugme-slider{
-		width: 50%;
 	}
 	.ponuda-text{
 		transform: translate(0px, 5px);
@@ -864,4 +796,84 @@ hr{
 .bioskop img{
 	height: 250px;
 	width: 350px;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1100px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.active{
+  background-color: #717171;
+}
+.btn-slider{
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	background-color: #b52d2d;
+	border: 1px solid black;
+	padding: 8px 16px;
+	color: #fff;
+}
+
+/* Fading animation */
+.fadeSlider {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  position: relative;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.bottom-nav{
+	display: flex;
+	justify-content: space-between;
+}
+.recenzije-link{
+	width: 1170px;
+	margin: 0 auto;
+	padding-left: 32px;
+}
+.visina-520{
+	height: 520px;
 }

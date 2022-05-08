@@ -33,7 +33,7 @@
 							<div class="ponuda-text">
 								<?php 
 								$opis = $row["opis"];
-								$opis = substr($opis,0,200);
+								$opis = substr($opis,0,800);
 								echo htmlspecialchars($opis)."...";?>
 							</div>
 							<div class="cena">

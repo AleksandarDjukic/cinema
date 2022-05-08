@@ -43,35 +43,40 @@
 				</div>
 				<div class="recenzije">
 					<h2>Recenzije filmova</h2>
-					<?php $result = mysqli_query($conn,"SELECT * FROM recenzije LIMIT 2");?>
-					<div class="recenzija">
+					<?php $result = mysqli_query($conn,"SELECT * FROM recenzije LIMIT 3");?>
+					<div class="row">
 						<?php while($row = mysqli_fetch_array($result)) {?>
-						<div class="recenzija-naslov">
-							<h4 class="n-centar"><?php echo htmlspecialchars($row['naslov']);?></h4>
+							<div class="col-sm-4">
+							<a href="recenzija.php?recenzija=<?php echo$row['id']?>"class="i-link">
+								<div class="thumbnail visina-520">
+									<img src="<?php echo htmlspecialchars($row['slika']);?>"  class="i-slika">
+									<p class="istaknuto-tekst"><?php echo htmlspecialchars($row['naslov']);?></p>
+									<p class="istaknuto-tekst">
+										<?php 
+											$sadrzaj = $row["sadrzaj"];
+											$sadrzaj = substr($sadrzaj,0,200); 
+											echo htmlspecialchars($sadrzaj).'...';
+										?>
+									</p>
+									<button class="btn" data-toggle="modal" data-target="#myModal">Pogledaj</button>
+								</div>
+							</a>
 						</div>
-						<img src="<?php echo htmlspecialchars($row['slika']);?>" class="recenzija-slika">
-						<p class="recenzija-text">
-							<?php 
-							$sadrzaj = $row["sadrzaj"];
-							$sadrzaj = substr($sadrzaj,0,350); 
-							echo $sadrzaj.'...';?>	
-						</p>
-						<div class="nastavi">
-							<?php echo '<a href='.'recenzija.php?recenzija='.htmlspecialchars($row['id']).'>';?>
-						Nastavi sa čitanjem</a>
-						</div><?php }?>
+						<?php }?>
 					</div>
 				</div>
-				<a href="recenzije.php">
-					<div class="sve-recenzije">
-						Pogledaj sve recenzije
-					</div>
-				</a>
-				<a href="napisi.php">
-					<div class="sve-recenzije">
-						Napiši svoju recenziju
-					</div>
-				</a>
+				<div class="bottom-nav">
+					<a href="recenzije.php">
+						<div class="sve-recenzije">
+							Pogledaj sve recenzije
+						</div>
+					</a>
+					<a href="napisi.php">
+						<div class="sve-recenzije">
+							Napiši svoju recenziju
+						</div>
+					</a>
+				</div>
 			</div>
 			<?php require 'template/footer.php';?>
 		</section>

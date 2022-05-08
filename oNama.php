@@ -20,30 +20,34 @@ require 'template/head.php';
 	  <button class="tablinks" onclick="openCity(event, 'nis')">Niš</button>
 	  <button class="tablinks" onclick="openCity(event, 'sve')">Sve</button>
 	</div>
-	<div id="beograd" class="tabcontent">
-		<div class="bioskop">
-			<h3>Beograd 1</h3>
-			<img src="img/about/bg1.jpg"/>
-			<p>Svetog Save 1</p>
-		</div>
-		<div class="bioskop">
-			<h3>Beograd 2</h3>
-			<img src="img/about/bg2.jpg"/>
-			<p>Cara Lazara 5</p>
-		</div>
-	</div>
-	<div id="novisad" class="tabcontent">
-		<div class="bioskop">
-			<h3>Novi Sad</h3>
-			<img src="img/about/ns.jpg"/>
-			<p>Bulevar Oslobođenja 32</p>
-		</div>
-	</div>
-	<div id="nis" class="tabcontent">
-		<div class="bioskop">
-			<h3>Niš</h3>
-			<img src="img/about/nis.jpg"/>
-			<p>Nikole Tesle 7</p>
+	<div class="container">
+		<div class="row">
+			<div id="beograd" class="tabcontent col-sm-8">
+				<div class="bioskop  col-sm-6">
+					<h3>Beograd 1</h3>
+					<img src="img/about/bg1.jpg"/>
+					<p>Svetog Save 1</p>
+				</div>
+				<div class="bioskop col-sm-6">
+					<h3>Beograd 2</h3>
+					<img src="img/about/bg2.jpg"/>
+					<p>Cara Lazara 5</p>
+				</div>
+			</div>
+			<div id="novisad" class="tabcontent  col-sm-4">
+				<div class="bioskop">
+					<h3>Novi Sad</h3>
+					<img src="img/about/ns.jpg"/>
+					<p>Bulevar Oslobođenja 32</p>
+				</div>
+			</div>
+			<div id="nis" class="tabcontent col-sm-4">
+				<div class="bioskop">
+					<h3>Niš</h3>
+					<img src="img/about/nis.jpg"/>
+					<p>Nikole Tesle 7</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
